@@ -34,6 +34,7 @@ Recall	Correct predictions / Total ground truths
 F1 Score	Harmonic mean of Precision and Recall
 AP	Average Precision for each class
 mAP@0.5	Mean of all class AP scores at IoU=0.5
+
 📊 Example Results
 
 Validation Set
