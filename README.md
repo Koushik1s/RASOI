@@ -23,17 +23,24 @@ Correlation Matrix: CSV file (63×63) with food relationship scores
 
 Example (scale 0–5):
 
-Class	Idli	Sambar	Rasam	Chicken Curry	Rice
-Idli	5	4	2	1	3
-Sambar	4	5	3	1	3
-Chicken	1	1	1	5	4
+
+| Class       | Idli | Sambar | Rasam | Chicken Curry | Rice |
+| ----------- | ---- | ------ | ----- | ------------- | ---- |
+| **Idli**    | 5    | 4      | 2     | 1             | 3    |
+| **Sambar**  | 4    | 5      | 3     | 1             | 3    |
+| **Chicken** | 1    | 1      | 1     | 5             | 4    |
+
+
 🧪 Metrics Generated
-Metric	Description
-Precision	Correct predictions / Total predictions
-Recall	Correct predictions / Total ground truths
-F1 Score	Harmonic mean of Precision and Recall
-AP	Average Precision for each class
-mAP@0.5	Mean of all class AP scores at IoU=0.5
+
+| Metric    | Description                               |
+| --------- | ----------------------------------------- |
+| Precision | Correct predictions / Total predictions   |
+| Recall    | Correct predictions / Total ground truths |
+| F1 Score  | Harmonic mean of Precision and Recall     |
+| AP        | Average Precision for each class          |
+| mAP@0.5   | Mean of all class AP scores at IoU=0.5    |
+
 
 📊 Example Results
 
@@ -51,15 +58,7 @@ mAP@0.5: 0.82
 
 Improvements after correlation loss in Plates 4, 7, 8 (removed 4 misclassifications)
 
-🚀 How to Run
-# Train
-yolo train model=yolov12s.pt data=data.yaml epochs=200 batch=16 imgsz=640
 
-# Evaluate
-python evaluation.py --model runs/train/weights/best.pt --data datasets/test
-
-# Custom Loss
-python train_with_corr_loss.py --correlation loss/correlation_matrix.csv
 
 📦 Dependencies
 pip install ultralytics pandas scikit-learn tqdm openpyxl gdown
@@ -68,7 +67,7 @@ pip install ultralytics pandas scikit-learn tqdm openpyxl gdown
 
 RASOI Dataset
 
-Google Drive – Predictions & Metrics
+Predictions & Metrics
 
 Correlation Matrix CSV
 
