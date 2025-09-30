@@ -46,7 +46,7 @@ Example (scale 0–5):
 
 Validation Set
 
-mAP@0.5: 0.93
+mAP@0.5: 0.84
 
 Strong classes: Rice, Salad, Dal, Raita
 
@@ -54,7 +54,7 @@ Weak classes: Rasam, Paneer Curry (confused without paneer)
 
 Test Set
 
-mAP@0.5: 0.82
+mAP@0.5: 0.73
 
 Improvements after correlation loss in Plates 4, 7, 8 (removed 4 misclassifications)
 
